@@ -1,0 +1,10 @@
+-main SummitDemo
+-cp src
+
+# Libs
+-cp node_modules/mconsole-npm
+-cp node_modules/msignal
+-cp node_modules/taminahx
+-dce full
+
+-js out/production/summit/demo.js
