@@ -17,7 +17,6 @@ class GalleryView extends HTMLComponent {
     }
 
     public function displayAlbum( album:Album ):Void {
-        _titleDiv.innerHTML = album.Name;
         _contentDiv.innerHTML = "";
         for ( picture in album.Content ) {
             var item:PhotoItem = HTMLApplication.createInstance(PhotoItem);

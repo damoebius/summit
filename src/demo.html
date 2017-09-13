@@ -6,6 +6,18 @@
     <script src="http://storage.sakuradesigner.microclimat.com/apps/html5/js/CustomElements.min.js"></script>
 </head>
 <body>
+<components-GalleryView id="myGallery"></components-GalleryView>
 <script src="demo.js"></script>
+<script>
+    var translations = [{
+
+        fieldName: 'title',
+        value: 'My awesome gallery'
+
+    }];
+    SummitDemo.getInstance().init(translations);
+
+</script>
+
 </body>
 </html>
