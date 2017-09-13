@@ -1,5 +1,7 @@
 package components;
 
+import items.PhotoItem;
+import org.tamina.html.component.HTMLApplication;
 import js.html.DivElement;
 import model.Album;
 import org.tamina.html.component.HTMLComponent;
@@ -18,7 +20,9 @@ class GalleryView extends HTMLComponent {
         _titleDiv.innerHTML = album.Name;
         _contentDiv.innerHTML = "";
         for(picture in album.Content){
-            _contentDiv.innerHTML += picture.Url +  "</br>";
+            var item:PhotoItem = HTMLApplication.createInstance(PhotoItem);
+            item.init(picture);
+            _contentDiv.appendChild(item);
         }
     }
 }
